@@ -17,7 +17,7 @@ describe("First exam Front III", ()=>{
 
         describe('On error', () => {
             describe("Should show an error message",()=>{
-                it("If the username length is less than 3", async ()=>{
+                it("If the first input length is less than 3", async ()=>{
                     render(<App/>)
                     const inputs = screen.getAllByRole("textbox")
                     const submitButton = screen.getByRole('button', {type: "submit"})
@@ -30,7 +30,7 @@ describe("First exam Front III", ()=>{
                     expect(errorMessage).toBeInTheDocument()
                     expect(cardText1).not.toBeInTheDocument() 
                 })
-                it("If the username contains blank spaces at the beginning", async ()=>{
+                it("If the first input contains blank spaces at the beginning", async ()=>{
                     render(<App/>)
                     const inputs = screen.getAllByRole("textbox")
                     const submitButton = screen.getByRole('button', {type: "submit"})
@@ -43,7 +43,7 @@ describe("First exam Front III", ()=>{
                     expect(errorMessage).toBeInTheDocument()
                     expect(cardText1).not.toBeInTheDocument() 
                 })
-                it("If the password length is less than 6", async ()=>{
+                it("If the second input length is less than 6", async ()=>{
                     render(<App/>)
                     const inputs = screen.getAllByRole("textbox")
                     const submitButton = screen.getByRole('button', {type: "submit"})
@@ -56,7 +56,7 @@ describe("First exam Front III", ()=>{
                     expect(errorMessage).toBeInTheDocument()
                     expect(cardText1).not.toBeInTheDocument() 
                 })
-                it("If the password does not contains any numbers", async ()=>{
+                it("If the second input does not contains any numbers", async ()=>{
                     render(<App/>)
                     const inputs = screen.getAllByRole("textbox")
                     const submitButton = screen.getByRole('button', {type: "submit"})
